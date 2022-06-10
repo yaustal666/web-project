@@ -8,7 +8,17 @@
 <body>
 
     <%- include("./partials/navbar"); %>
-    <%- include("./partials/body"); %>
+
+    <% if(active === 'catalog'){ %> <%- include("./partials/catalog"); %> <% } %>
+
+    <% if(active === 'home'){ %> <%- include("./partials/temp"); %> <% } %>
+
+    <% if(active === 'help'){ %> <%- include("./partials/temp"); %> <% } %>
+
+    <% if(active === 'hall'){ %> <%- include("./partials/temp"); %> <% } %>
+
+    <% if(active === 'about'){ %> <%- include("./partials/temp"); %> <% } %>
+    
     <%- include("./partials/footer"); %>
 
     <script src="js/scrollup.js"></script>

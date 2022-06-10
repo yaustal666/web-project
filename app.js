@@ -18,7 +18,7 @@ app.use(express.static(path.resolve(__dirname, 'static')));
 
 
 app.get('/', (req, res)=>{
-    res.render('index', {title: 'Home'})
+    res.render('index', {title: 'Home', active: "home"})
 })
 
 app.get('/help', (req, res)=>{
@@ -34,7 +34,7 @@ app.get('/hall', (req, res)=>{
 })
 
 app.get('/about', (req, res)=>{
-    res.render('index', {title: 'About us'})
+    res.render('index', {title: 'About us', active: 'about'})
 })
 
 app.get('/contact', (req, res)=>{

@@ -18,6 +18,7 @@
     font-size: 22px;
 }
 
+
 .navbar-brand a.navbar-item:hover{
     background-color: #59eaea;
 }
@@ -43,4 +44,19 @@
 
 .footer .button {
     justify-content:flex-end;
+}
+
+.section {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 80px;
+}
+
+.container {
+    background-color:#AFEEEE;
+    padding: 50px;
+    width: 600px;
+    margin-top: 100px;
+    border-radius: 10px;
 }
