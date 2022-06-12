@@ -2,6 +2,9 @@
     background-color: #AFEEEE;
 }
 
+.navbar-start {
+    grid-column-gap: 50px;
+}
 .navbar-dropdown {
     border-top: 2px solid #ea1951;
     border-radius: 5px 5px 45px 45px;
@@ -32,6 +35,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 3fr;
     text-align: center;
+    grid-column-gap: 10px;
 }
 
 .footer .navbar-divider {
@@ -40,6 +44,11 @@
 
 .footer .footer-section ul li:first-child {
     font-size: 25px;
+}
+
+.footer .notification {
+    border-radius: 100px;
+    background-color:#b3f3ce;
 }
 
 .footer .button {
@@ -59,4 +68,12 @@
     width: 600px;
     margin-top: 100px;
     border-radius: 10px;
+}
+
+.scrollup {
+    color:#ce073c;
+}
+
+.big {
+    font-size: 25px;
 }
