@@ -2,7 +2,7 @@
 
 function scrollUp() {
     if (window.pageYOffset > 0) {
-    window.scrollBy(0, -10);
+    window.scrollBy(0, -30);
     setTimeout(scrollUp, 0);
     }
 }
