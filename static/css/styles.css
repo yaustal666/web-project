@@ -55,7 +55,7 @@
     justify-content:flex-end;
 }
 
-.section {
+.catalog {
     display: grid;
     grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 50px;
@@ -74,6 +74,45 @@
     color:#ce073c;
 }
 
+.scrollup-section{
+    margin-top: 35px;
+}
+
+
+.statistics {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+
+    margin: 30px 200px 0px 200px;
+
+}
+
+.statistics .is-4by3 {
+    margin: 30px;
+}
+
+.statistics .card{
+    box-shadow: none;
+}
+
+.statistics .card-content{
+    padding-top: 0px;
+}
+
+.is-2{
+    font-family: 'Dosis', sans-serif;
+}
+
+.button {
+    background-color: rgb(30, 241, 178);
+}
+
 .big {
     font-size: 25px;
 }
+
+.center {
+    text-align: center;
+}
+
