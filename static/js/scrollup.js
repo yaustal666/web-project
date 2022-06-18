@@ -7,6 +7,6 @@ function scrollUp() {
     }
 }
 
-var goTopBtn = document.querySelector('.scrollup');
+var scrollupButton = document.querySelector('.scrollup');
 
-goTopBtn.addEventListener('click', scrollUp);
+scrollupButton.addEventListener('click', scrollUp);
