@@ -2,15 +2,20 @@ const express = require('express')
 const path = require('path')
 const exphbs = require('express-handlebars')
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
+const mainRoutes = require('./routes/main.routes')
+const auth = require('./routes/auth.routes')
 
-const routes = require('./routes/routes')
+const app = express()
 
 // константы
 const PORT = 3000
 const mdb = 'mongodb+srv://yaustal666:qwerty123@petshare.7xikqsu.mongodb.net/?retryWrites=true&w=majority'
 // 
 
-const app = express()
+//  чтобы парсить тела запросов
+app.use(bodyParser.urlencoded({extended: true}))
+// 
 
 // подключение шаблонизатора
 const hbs = exphbs.create({
@@ -22,25 +27,27 @@ app.set('view engine', 'hbs')
 app.set('views', 'views')
 // 
 
+
 // подключение переопределения стилей, скриптов, картинок
 app.use(express.static(path.resolve(__dirname, 'static')));
 // 
 
-app.use(routes)
-app.use(express.json())
-
+// routes
+app.use(mainRoutes)
+app.use(auth)
+// 
 
 // starting 
-const start = async () => {
+async function start() {
 
     try {
       await mongoose.connect(mdb, { ssl: true })
-      console.log("Connected")
       app.listen(PORT, (req, res)=>{console.log(`Running on port ${PORT}`)})
 
     } catch (error) {
 
-      console.log(error)
+      console.log('Connection error', error.message)
+      process.exit(1)
     }
 }
 

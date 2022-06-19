@@ -1,8 +1,6 @@
 const {Router} = require('express')
 const router = Router()
 
-const auth = require('./auth')
-
 
 // шаблон для гет-запросов
 function routerGet(route, page, params){
@@ -26,12 +24,12 @@ routerGet('/about', 'about', {title: 'About'})
 
 routerGet('/contact', 'contact', {title: 'Contact'})
 
-routerGet('/profile', 'profile', {title: 'Profile'})
+routerGet('/signup', 'signup', {layout: 'service', title: 'Sign up'})
+
+routerGet('/login', 'login', {layout: 'service', title: 'Log in'})
 // 
 
-// пост-запросы
-router.post('/registrate', auth.registration)
-router.post('/login', auth.login)
-// 
+
+
 
 module.exports = router

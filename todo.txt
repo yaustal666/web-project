@@ -1,0 +1,17 @@
+Navbar ~~~ ✅
+Footer ~~~ ✅
+Home page ~~~ ✅
+Sign up & Log in pages ~~~ ✅
+Scrollup button ~~~ ✅
+
+Registration ~~~ 🎬
+logging in ~~~ 🎬
+
+Page after submitting during registration ~~~ 💡
+Hall ~~~ 💡
+
+Profile pages ~~~ 💡
+    My posts ~~~ 💡
+    Features ~~~ 💡
+    Add name under photo ~~~ 💡
+    Form for making posts ~~~ 💡
