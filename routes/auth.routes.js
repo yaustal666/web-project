@@ -3,7 +3,25 @@ const router = Router()
 const {check, validationResult} = require('express-validator')
 const User = require('../models/User')
 const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 
+
+// шаблон для гет-запросов
+function routerGet(route, page, params){
+
+    router.get(route, (req, res) =>{
+        res.render(page, params)
+    })
+}
+// 
+
+// гет-запросы
+routerGet('/signup', 'signup', {layout: 'service', title: 'Sign up'})
+
+routerGet('/login', 'login', {layout: 'service', title: 'Log in'})
+
+routerGet('/success', 'success', {layout: 'service', title: 'Success'})
+// 
 
 router.post('/registrate', 
     [
@@ -16,10 +34,7 @@ router.post('/registrate',
             const errors = validationResult(req)
 
             if(!errors.isEmpty()) {
-                return res.status(400).json({
-                    errors: errors.array(),
-                    message: "Некорректные данные"
-                })
+                return res.redirect(400, '/success')
             }
 
             const {username, password} = req.body
@@ -73,12 +88,21 @@ router.post('/login',
 
             if(!equal){
                 res.status(400).json({message: 'Неверный пароль'})
-            }
+            } 
+            
+            // const token = jwt.sign({username}, 'secret word', {expiresIn: "1h"} )
+            // return res.json({token})
 
         } catch (e) {
             res.status(500).json({message: "Извините, но что-то пошло не так, попробуйте ещё раз"})
         }
     }
 )
+
+router.get('/profile', (req, res) => {
+
+
+    res.render('profile', {title: 'Profile'})
+})
 
 module.exports = router

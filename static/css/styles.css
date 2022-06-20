@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+}
+
 .navbar {
     background-color: #AFEEEE;
 }
@@ -30,30 +34,6 @@
     background-color: #ce073c;
 }
 
-.footer {
-    background-color:#4ff597;
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr 2fr 3fr;
-    text-align: center;
-    grid-column-gap: 10px;
-}
-
-.footer .navbar-divider {
-    background-color:#4ff597;
-}
-
-.footer .footer-section ul li:first-child {
-    font-size: 25px;
-}
-
-.footer .notification {
-    border-radius: 100px;
-    background-color:#b3f3ce;
-}
-
-.footer .button {
-    justify-content:flex-end;
-}
 
 .catalog {
     display: grid;
@@ -70,6 +50,32 @@
     border-radius: 10px;
 }
 
+.footer {
+    background-color:#4ff597;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 3fr;
+    text-align: center;
+    grid-column-gap: 10px;
+}
+
+.footer .navbar-divider {
+    background-color:#4ff597;
+}
+
+.footer .footer-section ul:first-child {
+    font-size: 25px;
+}
+
+.footer .notification {
+    border-radius: 100px;
+    background-color:#b3f3ce;
+}
+
+.footerlink {
+    font-size: 15px;
+
+}
+
 .scrollup {
     color:#ce073c;
 }
@@ -77,7 +83,6 @@
 .scrollup-section{
     margin-top: 35px;
 }
-
 
 .statistics {
     display: grid;
@@ -111,6 +116,7 @@
     margin-top: 20px;
     gap: 20px 20px;
 }
+
 .profile-section img {
     background-size:contain;
 }
@@ -127,3 +133,14 @@
     text-align: center;
 }
 
+.deletebutton {
+    background-color: #fc4646;
+}
+
+.about {
+    display: grid;
+    grid-template: 1fr/ 2fr 1fr;
+    margin-top: 20px;
+    gap: 0px 40px;
+    font-size: 20pt;
+}

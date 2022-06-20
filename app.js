@@ -1,10 +1,15 @@
 const express = require('express')
-const path = require('path')
-const exphbs = require('express-handlebars')
 const mongoose = require('mongoose')
+const exphbs = require('express-handlebars')
+const expsession = require('express-session')
+
+const path = require('path')
 const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
+
 const mainRoutes = require('./routes/main.routes')
 const auth = require('./routes/auth.routes')
+
 
 const app = express()
 
@@ -16,6 +21,8 @@ const mdb = 'mongodb+srv://yaustal666:qwerty123@petshare.7xikqsu.mongodb.net/?re
 //  чтобы парсить тела запросов
 app.use(bodyParser.urlencoded({extended: true}))
 // 
+
+
 
 // подключение шаблонизатора
 const hbs = exphbs.create({

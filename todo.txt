@@ -1,11 +1,20 @@
 Navbar ~~~ ✅
 Footer ~~~ ✅
+
 Home page ~~~ ✅
+About page ~~~ ✅
+Profile page ~~~ ✅
+Contact page ~~~ ✅
+
 Sign up & Log in pages ~~~ ✅
 Scrollup button ~~~ ✅
 
-Registration ~~~ 🎬
-logging in ~~~ 🎬
+Registration ~~~ ✅ ~~~ 💡
+Logging in ~~~ 🎬
+
+Cards for pets ~~~ 💡
+Ability of user to post ~~~ 💡
+Catalog page ~~~ 💡
 
 Page after submitting during registration ~~~ 💡
 Hall ~~~ 💡
@@ -15,3 +24,7 @@ Profile pages ~~~ 💡
     Features ~~~ 💡
     Add name under photo ~~~ 💡
     Form for making posts ~~~ 💡
+
+Add photos ~~~ 💡
+
+Add config file ~~~ 💡

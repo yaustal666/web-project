@@ -11,25 +11,30 @@ function routerGet(route, page, params){
 }
 // 
 
-// гет-запросы
-routerGet('/', 'home', {title: 'Home'})
+// основные страницы
+routerGet('/', 'home', {title: 'Home'}) // ✅
 
-routerGet('/help', 'help', {title: 'Help'})
 
 routerGet('/catalog', 'catalog', {title: 'Catalog'})
 
 routerGet('/hall', 'hall', {title: 'Hall'})
 
-routerGet('/about', 'about', {title: 'About'})
+routerGet('/contact', 'contact', {title: 'Contacts'}) // ✅
 
-routerGet('/contact', 'contact', {title: 'Contact'})
+routerGet('/about', 'about', {title: 'About us'}) // ✅
 
-routerGet('/signup', 'signup', {layout: 'service', title: 'Sign up'})
+routerGet('/features', 'temp', {title: 'Features', temp: "Временная заглушка"})
 
-routerGet('/login', 'login', {layout: 'service', title: 'Log in'})
+routerGet('/aboutme', 'temp', {title: 'About me', temp: "Временная заглушка"})
+
+routerGet('/myposts', 'temp', {title: 'Myposts', temp: "Временная заглушка"})
+
+routerGet('/issues', 'temp', {title: 'Issues', temp: "Временная заглушка"})
+
+routerGet('/rules', 'temp', {title: 'Rules', temp: "Временная заглушка"})
+
+routerGet('/accountsettings', 'temp', {title: 'Settings', temp: "Временная заглушка"})
 // 
-
-
 
 
 module.exports = router
